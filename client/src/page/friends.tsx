@@ -92,7 +92,7 @@ export function FriendsPage() {
             <meta property="og:type" content="article" />
             <meta property="og:url" content={document.URL} />
         </Helmet>
-        <Waiting for={friendsAvailable.length != 0 || friendsUnavailable.length != 0}>
+        <Waiting for={friendsAvailable.length != 0 || friendsUnavailable.length != 0 || !!profile.permission}>
             <main className="w-full flex flex-col justify-center items-center mb-8 t-primary">
                 {friendsAvailable.length > 0 &&
                     <>
